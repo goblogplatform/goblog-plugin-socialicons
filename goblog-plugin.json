@@ -1,0 +1,12 @@
+{
+  "name": "socialicons",
+  "display_name": "Social Icons",
+  "description": "A row of links to your profiles (GitHub, LinkedIn, X, Instagram, Strava, Steam and more) in the footer of every page.",
+  "author": "Jason Ernst",
+  "license": "Apache-2.0",
+  "runtime": "wasm",
+  "entry": "plugin.wasm",
+  "allowed_hosts": [],
+  "min_goblog_version": "0.2.9",
+  "homepage": "https://github.com/goblogplatform/goblog-plugin-socialicons"
+}
