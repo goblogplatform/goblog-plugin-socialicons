@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.1.0
+
+- The footer links carry `rel="me"`, marking each profile as the site owner's own.
+
 ## 2.0.0
 
 - Rewritten as a WebAssembly plugin, installable from the directory. Replaces the `socialicons` plugin that was compiled into goblog up to 0.6.x; the settings keys are unchanged, so an upgraded site keeps its profile URLs.

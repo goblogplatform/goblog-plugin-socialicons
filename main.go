@@ -40,7 +40,7 @@ func readHook(name string) (hookInput, bool) {
 
 //go:wasmexport identity
 func identity() int32 {
-	return outputJSON(map[string]string{"name": "socialicons", "display_name": "Social Icons", "version": "2.0.0"})
+	return outputJSON(map[string]string{"name": "socialicons", "display_name": "Social Icons", "version": "2.1.0"})
 }
 
 //go:wasmexport settings

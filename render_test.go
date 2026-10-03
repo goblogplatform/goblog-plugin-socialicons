@@ -16,8 +16,8 @@ func TestFooterHTMLRendersOnlyConfiguredLinks(t *testing.T) {
 	if strings.Contains(out, "linkedin") {
 		t.Fatalf("unconfigured network rendered: %q", out)
 	}
-	if !strings.Contains(out, `rel="noopener noreferrer"`) {
-		t.Fatalf("external links need noopener: %q", out)
+	if strings.Count(out, `rel="me noopener noreferrer"`) != 2 {
+		t.Fatalf("each link needs rel=me and noopener: %q", out)
 	}
 }
 

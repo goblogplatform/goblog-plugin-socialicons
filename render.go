@@ -67,6 +67,8 @@ func links(settings map[string]string) []link {
 
 // footerHTML renders the icon row. Setting values are admin-typed, but
 // the browser trusts whatever comes back, so everything is escaped.
+// rel="me" says each profile is the site owner's own, the identity link
+// search engines and the fediverse look for.
 func footerHTML(settings map[string]string) string {
 	ls := links(settings)
 	if ls == nil {
@@ -74,7 +76,7 @@ func footerHTML(settings map[string]string) string {
 	}
 	out := `<div class="text-center" style="padding: 10px 0;">`
 	for _, l := range ls {
-		out += `<a href="` + html.EscapeString(l.URL) + `" target="_blank" rel="noopener noreferrer" title="` + html.EscapeString(l.Name) + `" style="margin: 0 6px; color: inherit;"><i class="` + l.Icon + ` fa-1x"></i></a>`
+		out += `<a href="` + html.EscapeString(l.URL) + `" target="_blank" rel="me noopener noreferrer" title="` + html.EscapeString(l.Name) + `" style="margin: 0 6px; color: inherit;"><i class="` + l.Icon + ` fa-1x"></i></a>`
 	}
 	return out + `</div>`
 }
